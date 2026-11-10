@@ -1,0 +1,6 @@
+.DS_Store
+_preview.html
+*.log
+.env
+.env.*
+private/

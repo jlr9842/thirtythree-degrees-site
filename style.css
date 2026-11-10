@@ -1,0 +1,48 @@
+:root{--bg:#0f1012;--panel:#17191c;--ink:#f4f2ee;--soft:#a3a8ae;--yel:#f2c230}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Avenir Next",Avenir,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+a{color:inherit}
+.hero{min-height:min(78vh,720px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px 40px;
+  background:radial-gradient(ellipse at 50% 38%,#26292e 0,#0f1012 70%)}
+.hero-logo{width:min(760px,92vw);height:auto}
+.lede{color:var(--soft);font-size:clamp(17px,2.2vw,21px);text-align:center;margin:28px 0 0}
+main{max-width:1100px;margin:0 auto;padding:0 20px}
+h2{font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--soft);font-weight:600;margin:64px 0 20px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{display:flex;flex-direction:column;background:var(--panel);border-radius:22px;overflow:hidden;text-decoration:none;transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.shot{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.shot.tall{object-position:50% 22%}
+.body{display:flex;gap:16px;padding:20px 22px 24px}
+.appicon{border-radius:13px;flex:none}
+h3{margin:0 0 6px;font-size:20px}
+.body p{margin:0 0 12px;color:var(--soft);font-size:16px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--yel);border:1.5px solid var(--yel);border-radius:999px;padding:3px 10px}
+.name{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start;margin-top:30px}
+.name .mark{width:220px;height:auto;margin-top:70px}
+.name p{color:var(--soft);font-size:18px;max-width:620px}
+.marks{display:flex;gap:30px;margin-top:22px}
+.marks figure{margin:0;text-align:center}
+.marks img{height:auto}
+figcaption{color:var(--soft);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-top:8px}
+footer{margin:80px 0 0;padding:28px 20px 40px;text-align:center;color:#6f747a;font-size:14px;border-top:1px solid #1e2024}
+/* the logo drives in: the 3s slide, the cut's yellow lands, the banking draws, the degree pops */
+@media (prefers-reduced-motion:no-preference){
+  .hero-logo .m-white{animation:slide .7s cubic-bezier(.2,.8,.2,1) both}
+  .hero-logo .m-low,.hero-logo .m-high{animation:fade .35s ease-out .75s both}
+  .hero-logo .m-bank{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s ease-in-out .35s forwards}
+  .hero-logo .m-name{animation:fade .6s ease-out .55s both}
+  .hero-logo .m-deg{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.3,1.6,.5,1) 1.15s both}
+}
+@keyframes slide{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+@media (max-width:760px){
+  .cards{grid-template-columns:1fr}
+  .name{grid-template-columns:1fr;gap:10px}
+  .name .mark{margin-top:20px;width:160px}
+  .br{display:none}
+  .hero{min-height:min(62vh,520px)}
+}
