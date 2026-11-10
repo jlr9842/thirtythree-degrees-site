@@ -6,7 +6,7 @@ The studio's public website. Static, one page; see README.md. Brand decisions li
 ## Settled decisions: read first
 - **As minimal as possible, just to establish the studio (Josh, 2026-11-10):** the animated logo, the apps as a list
   (icon, name, one line), contact. Call them apps, not games: ProSim is a simulator, Scorebook a utility, Race Day an
-  analytics companion. **Race Day stays unlisted for now** (Josh, 2026-11-10: employer overlap, NASCAR on Prime Video). Don't explain the studio's name. Josh edits the copy himself: keep it in the marked blocks of
+  analytics companion. **Race Day is not part of the studio** (Josh, 2026-11-10, after the Amazon conflict-of-interest review: NASCAR stays a personal project, never sold or advertised). Don't explain the studio's name. Josh edits the copy himself: keep it in the marked blocks of
   index.html, plain HTML. Dark page, yellow #f2c230 accent. Futura Bold version of the mark until Josh picks between Futura and the chamfered 3.
 - No trackers, analytics or outside fonts. No personal data, emails or addresses until Josh gives a studio contact.
 - Public repo only with Josh's OK (GitHub Pages on the free plan needs it). Every public site also gets a card on
